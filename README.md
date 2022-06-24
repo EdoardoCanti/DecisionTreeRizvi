@@ -50,9 +50,6 @@ Learning outcomes are represented by three distinct values:
 | Distinction | >= 85         |
 
 ## Highlighting results
-
-As depicted in barplots and in the previous graph, we can see that the **impact of each variable on learning outcomes changes over time**. We are now interested in the importance on average. 
-
 By our experiments it turns out that, in decresing order, **the most important variables are**:
 - region
 - imd band
@@ -72,13 +69,13 @@ This has been done because ScikitLearn implementation of decision trees doesn't 
 
 To apply this operation we also came accross OneHotEncoding(). Here is why we didn't used it:
 
-*For simplicity imagine now that imd_band domain contains only three values: Ireland (I), London(L), Wales(W)*.
+*For simplicity imagine now that region domain contains only three values: Ireland (I), London(L), Wales(W)*.
 
-Consider we are trying to convert *imd_band* values into numerical using *OneHotEncoding*. 
-What *OneHotEncoding* does is to create three distinct new *dummy variables* (and so attributes). *Each object* now will have these three new dummy variables indicating if the object itself has *that variable true or false (0,1)*. So if now we will try to *compute variable importance*, we will not have a single variable importance for the variable *imd_band* but instead we will compute the single importances of living in Ireland(I), London(L), Wales(S); this is not what we want.
+Consider we are trying to convert *region* values into numerical using *OneHotEncoding*. 
+What *OneHotEncoding* does is to create three distinct new *dummy variables* (and so attributes). *Each object* now will have these three new dummy variables indicating if the object itself has *that variable true or false (0,1)*. So if now we will try to *compute variable importance*, we will not have a single variable importance for the variable *region* but instead we will compute the single importances of living in Ireland(I), London(L), Wales(S); this is not what we want.
 
 What happens using LabelEncoder: 
-   - imagine Dom(imd_band) = {I,L,W}
+   - imagine Dom(region) = {I,L,W}
    - imagine encoding as I->0, L->1, W->2
     
 | id_student  | imd_band      |
@@ -89,7 +86,7 @@ What happens using LabelEncoder:
 
 
 What happened using OneHotEncoding: 
-   - imagine Dom(imd_band) = {I,L,W}
+   - imagine Dom(region) = {I,L,W}
    - imagine encoding as I->0, L->1, W->2
  
     
