@@ -43,6 +43,19 @@ Learning outcomes are represented by three distinct values:
 | Pass        | >= 55         |
 | Distinction | >= 85         |
 
+## Highlighting results
+
+As depicted in barplots and in the previous graph, we can see that the **impact of each variable on learning outcomes changes over time**. We are now interested in the importance on average. 
+
+By our experiments it turns out that, in decresing order, **the most important variables are**:
+- region
+- imd band
+- highest education
+- age band
+- gender
+- disability
+
+
 ## NOTES:
 ### LabelEncoder:
 Is a function used to encode target values in numerical values in a range.
@@ -110,3 +123,4 @@ def get_tree(self,rnd):
         return self.tree
 ```
 With this new *get_tree* function we now started to obtain the same result of Rizvi et al.
+
