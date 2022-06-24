@@ -6,6 +6,12 @@
 
 ### Dataset: [OULAD](https://analyse.kmi.open.ac.uk/open_dataset)
 
+### How to run:
+Visit [OULAD](https://analyse.kmi.open.ac.uk/open_dataset) and download the dataset.
+Change datasets path in the notebook if necessary. This should not be required if you just move the downloaded dataset in the notebook directory.
+![change paths](explain.png)
+Just run.
+
 #### A very short review of the paper
 
 Rizvi et al. research was not the first work to prove the impact of student's individual characteristics on their learning outcomes, but has been one of the fewest that considered learning outcomes related to the course progression. 
